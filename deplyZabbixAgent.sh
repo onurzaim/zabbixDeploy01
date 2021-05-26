@@ -2,13 +2,12 @@
 mkdir -p /etc/zabbix/scripts
 sed -i s/"Server=127.0.0.1"/"Server=zabbix.sld.gr"/g /etc/zabbix/zabbix_agent2.conf
 sed -i s/"ServerActive=127.0.0.1"/"ServerActive=zabbix.sld.gr"/g /etc/zabbix/zabbix_agent2.conf
-sed -i s/"Hostname=Zabbix server"/"ServerActive=kakofonix.sld.gr"/g /etc/zabbix/zabbix_agent2.conf
+sed -i s/"Hostname=Zabbix server"/"Hostname=kakofonix.sld.gr"/g /etc/zabbix/zabbix_agent2.conf
 
 cp smartctl-disks-discovery.pl /etc/zabbix/scripts
 cp apacheConnection.conf  /etc/zabbix/zabbix_agent2.d/
 cp mdadm.conf /etc/zabbix/zabbix_agent2.d/
 cp smartctl.conf /etc/zabbix/zabbix_agent2.d/
-cp userparameter_mysql.conf /etc/zabbix/zabbix_agent2.d/
 cp zabbix_smartctl.conf /etc/zabbix/zabbix_agent2.d/
 
 chmod +x /etc/zabbix/scripts -R
