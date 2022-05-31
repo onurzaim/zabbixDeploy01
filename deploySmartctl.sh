@@ -5,8 +5,6 @@ zabbixUserParamDir="zabbix_agentd.d"
 zabbixScriptDir="scripts"
 agentName="zabbix-agent"
 
-$zabbixConfDir/$zabbixUserParamDir
-
 mkdir -p $zabbixConfDir/$zabbixScriptDir
 
 cp smartctl-disks-discovery.pl $zabbixConfDir/$zabbixScriptDir
