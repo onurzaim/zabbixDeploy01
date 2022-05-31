@@ -21,8 +21,6 @@ chmod u+s $smartctlCmd
 smartctlCmd=$(which smartctl)
 
 tee -a /etc/sudoers.d/zabbix >/dev/null << EOF
-zabbix  ALL=(ALL) NOPASSWD: $netstatCmd
-zabbix  ALL=(ALL) NOPASSWD: $systemctlCmd
 zabbix  ALL=(ALL) NOPASSWD: $smartctlCmd
 zabbix  ALL=(ALL) NOPASSWD: $zabbixConfDir/$zabbixScriptDir/smartctl-disks-discovery.pl
 EOF
