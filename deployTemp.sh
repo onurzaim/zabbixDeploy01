@@ -1,9 +1,9 @@
 apt install lm-sensors
 
 zabbixConfDir="/etc/zabbix"
-zabbixUserParamDir="zabbix_agentd.d"
+zabbixUserParamDir="zabbix_agent2.d"
 zabbixScriptDir="scripts"
-agentName="zabbix-agent"
+agentName="zabbix-agent2"
 
 mkdir -p $zabbixConfDir/$zabbixScriptDir
 
