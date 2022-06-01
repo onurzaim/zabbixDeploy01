@@ -7,7 +7,7 @@ agentName="zabbix-agent"
 
 mkdir -p $zabbixConfDir/$zabbixScriptDir
 
-cp cpuTemp.conf $zabbixConfDir/$zabbixScriptDir
+cp cpuTemp.conf $zabbixConfDir/$zabbixUserParamDir
 
 sensorCmd=$(which sensors)
 
