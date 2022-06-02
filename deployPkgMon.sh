@@ -1,6 +1,11 @@
-rm -rf zabbixDeploy01
-git clone https://github.com/onurzaim/zabbixDeploy01.git
-cd zabbixDeploy01/
-bash deployPkgMon.sh
-systemctl restart zabbix-agent2
-ps -ef | grep zabbix
+
+#!/bin/bash
+
+zabbixConfDir="/etc/zabbix"
+zabbixUserParamDir="zabbix_agentd.d"
+zabbixScriptDir="scripts"
+agentName="zabbix-agent2"
+
+cp packageMonitor.conf $zabbixConfDir/$zabbixUserParamDir
+
+systemctl restart $agentName
